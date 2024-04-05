@@ -1,6 +1,5 @@
 package easy
 
-import "fmt"
 
 func MakeGood(s string) string {
 		stack := []byte{}

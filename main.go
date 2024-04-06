@@ -1,14 +1,16 @@
 package main
 
 import (
+	"fmt"
 
-	"github.com/tmichov/leetcode/easy"
+	"github.com/tmichov/leetcode/medium"
 )
 
 func main() {
+	string := "lee(t(c)o)de)"
 
-		linked := &easy.ListNode{} 
+	s := medium.MinimumRemoveToMakeValidParentheses(string)
 
-		linked = easy.RemoveDuplicatesFromSortedList(linked)
+	fmt.Println(s)
 }
 

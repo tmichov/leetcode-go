@@ -3,8 +3,6 @@ package easy
 import "fmt"
 
 //88. Merge sorted arrays
-
-// [2,3,4,0,0,0] [1,4,7]
 func MergeSortedArrays(nums1 []int, m int, nums2 []int, n int) {
 	if n == 0 {
 		return
@@ -16,7 +14,6 @@ func MergeSortedArrays(nums1 []int, m int, nums2 []int, n int) {
 			nums1[i] = nums2[0]
 
 			foundAt := 0
-
 			for j := foundAt; j < n; j++ {
 				foundAt = j
 				if nums2[j] > c {

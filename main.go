@@ -3,14 +3,17 @@ package main
 import (
 	"fmt"
 
-	"github.com/tmichov/leetcode/medium"
+	"github.com/tmichov/leetcode/easy"
 )
 
 func main() {
-	string := "lee(t(c)o)de)"
+	
+	nums1 := []int{0}
 
-	s := medium.MinimumRemoveToMakeValidParentheses(string)
+	nums2 := []int{1}
 
-	fmt.Println(s)
+	easy.MergeSortedArrays(nums1, len(nums1)-len(nums2), nums2, len(nums2))
+
+	fmt.Println()
 }
 

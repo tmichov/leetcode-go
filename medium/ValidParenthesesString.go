@@ -1,5 +1,6 @@
 package medium
 
+// Medium 678
 func ValidPerenthesesString(s string) bool {
 	leftMin := 0
 	leftMax := 0

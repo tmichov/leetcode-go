@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	easy.SameTree()
+	easy.SymmetricTree()
 
 	fmt.Println()
 }

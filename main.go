@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	easy.SymmetricTree()
+	easy.MaxDepth()
 
 	fmt.Println()
 }

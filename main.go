@@ -7,8 +7,7 @@ import (
 )
 
 func main() {
-
-	easy.BinaryTreeInorderTraversal()
+	easy.SameTree()
 
 	fmt.Println()
 }

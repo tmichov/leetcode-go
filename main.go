@@ -4,14 +4,24 @@ import (
 	"fmt"
 
 	"github.com/tmichov/leetcode/easy"
-	"github.com/tmichov/leetcode/util"
 )
 
 func main() {
-	nums := []int{-10, -3, 0, 5, 9}
-	root := easy.ConvertSorterArrayToBST(nums)
-	util.PrintBinarySearchTree(root)
-	
-	fmt.Println()
+	node := &easy.TreeNode{
+		Val: 1,
+	}
+
+	node.Left = &easy.TreeNode{Val: 2}
+	node.Right = &easy.TreeNode{Val: 2}
+
+	node.Left.Left = &easy.TreeNode{Val: 2}
+
+	node.Right.Right = &easy.TreeNode{Val: 2}
+
+	node.Left.Left.Left = &easy.TreeNode{Val: 2}
+	node.Right.Right.Right = &easy.TreeNode{Val: 2}
+	balanced := easy.IsBalanced(node)
+
+	fmt.Println("balanced: ", balanced)
 }
 

@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/tmichov/leetcode/medium"
+	"github.com/tmichov/leetcode/easy"
 )
 
+
 func main() {
-	balanced := medium.CompareVersionNumbers("1.1.1", "1.00001")
+	balanced := easy.PascalsTriangle(6)
 
 	fmt.Println("balanced: ", balanced)
 }

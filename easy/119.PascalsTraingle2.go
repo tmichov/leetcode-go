@@ -1,7 +1,13 @@
 package easy
 
-func PascalsTriangle(numRows int) [][]int {
-	triangle := make([][]int, numRows)
+func GetPascalsTriangleRow(rowIndex int) []int {
+    triangle := generate(rowIndex+1)
+
+    return triangle[len(triangle)-1]
+}
+
+func generate(numRows int) [][]int {
+    triangle := make([][]int, numRows)
 
 	for i := range triangle {
 		triangle[i] = make([]int, i+1)	
@@ -14,4 +20,3 @@ func PascalsTriangle(numRows int) [][]int {
 
 	return triangle
 }
-

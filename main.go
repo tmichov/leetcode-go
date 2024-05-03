@@ -3,21 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/tmichov/leetcode/easy"
+	"github.com/tmichov/leetcode/medium"
 )
 
 func main() {
-	node := &easy.TreeNode{
-		Val: 1,
-	}
-
-	node.Right = &easy.TreeNode{Val: 2}
-	node.Left = &easy.TreeNode{Val: 2}
-
-	node.Right.Left = &easy.TreeNode{Val: 2}
-	node.Right.Right = &easy.TreeNode{Val: 2}
-
-	balanced := easy.MinimumDepthOfBinaryTree(node)
+	balanced := medium.CompareVersionNumbers("1.1.1", "1.00001")
 
 	fmt.Println("balanced: ", balanced)
 }

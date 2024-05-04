@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/tmichov/leetcode/easy"
+	"github.com/tmichov/leetcode/medium"
 )
 
 
 func main() {
-	balanced := easy.PascalsTriangle(6)
+	people := []int{2,2,2,2,2,2}
+	balanced := medium.BoatsToSavePeople(people, 16)
 
 	fmt.Println("balanced: ", balanced)
 }

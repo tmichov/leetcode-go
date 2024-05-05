@@ -8,8 +8,7 @@ import (
 
 
 func main() {
-	prices := []int{7,6,4,3,1}
-	test := easy.BestTimeToBuyAndSellStock(prices)
+	test := easy.ValidPalindrome(" ")
 
 	fmt.Println(test)
 }

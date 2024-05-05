@@ -1,6 +1,8 @@
 package easy
 
-func IsBalanced(root *TreeNode) bool {
+import "github.com/tmichov/leetcode/util"
+
+func IsBalanced(root *util.TreeNode) bool {
     if root == nil{
         return true
     }
@@ -11,7 +13,7 @@ func IsBalanced(root *TreeNode) bool {
     return false
 }
 
-func maxDepth(root *TreeNode) int{
+func maxDepth(root *util.TreeNode) int{
     if root == nil{
         return 0
     }

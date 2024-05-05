@@ -1,15 +1,19 @@
 package easy
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/tmichov/leetcode/util"
+)
 
 func MaxDepth() {
-	root := &TreeNode{Val: 3}
+	root := &util.TreeNode{Val: 3}
 
-	root.Left = &TreeNode{Val: 9}
-	root.Right = &TreeNode{Val: 20}
+	root.Left = &util.TreeNode{Val: 9}
+	root.Right = &util.TreeNode{Val: 20}
 
-	root.Right.Left = &TreeNode{Val: 15}
-	root.Right.Right = &TreeNode{Val: 15}
+	root.Right.Left = &util.TreeNode{Val: 15}
+	root.Right.Right = &util.TreeNode{Val: 15}
 
 	if root == nil {
 		fmt.Println(0)
@@ -21,7 +25,7 @@ func MaxDepth() {
 	fmt.Println(depth)
 }
 
-func treeDepth(node *TreeNode) int {
+func treeDepth(node *util.TreeNode) int {
 	if node == nil || (node.Left == nil && node.Right == nil) {
 		return 0
 	} else {

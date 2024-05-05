@@ -1,24 +1,28 @@
 package easy
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/tmichov/leetcode/util"
+)
 
 func SymmetricTree () {
-	root := &TreeNode{Val: 1}
+	root := &util.TreeNode{Val: 1}
 
-	root.Left = &TreeNode{Val: 4}
-	root.Left.Left= &TreeNode{Val: 1}
-	root.Left.Left.Left = &TreeNode{Val: 2}
+	root.Left = &util.TreeNode{Val: 4}
+	root.Left.Left= &util.TreeNode{Val: 1}
+	root.Left.Left.Left = &util.TreeNode{Val: 2}
 
-	root.Right = &TreeNode{Val: 4}
-	root.Right.Right = &TreeNode{Val: 1}
-	root.Right.Right.Right= &TreeNode{Val: 2}
+	root.Right = &util.TreeNode{Val: 4}
+	root.Right.Right = &util.TreeNode{Val: 1}
+	root.Right.Right.Right= &util.TreeNode{Val: 2}
 
 	answer := inorderZeros(root.Left, root.Right)
 
 	fmt.Println(answer)
 }
 
-func inorderZeros(left *TreeNode, right *TreeNode) bool {
+func inorderZeros(left *util.TreeNode, right *util.TreeNode) bool {
 	if left == nil && right == nil {
 		return true;
 	}

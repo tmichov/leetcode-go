@@ -1,6 +1,8 @@
 package easy
 
-func MinimumDepthOfBinaryTree(root *TreeNode) int {
+import "github.com/tmichov/leetcode/util"
+
+func MinimumDepthOfBinaryTree(root *util.TreeNode) int {
 	if root == nil {
 		return 0
 	}

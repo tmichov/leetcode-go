@@ -1,14 +1,13 @@
 package easy
 
-import "fmt"
+import (
+	"fmt"
 
-type ListNode struct {
-		Val int
-		Next *ListNode
-}
+	"github.com/tmichov/leetcode/util"
+)
 
 //1 -> 1 -> 2 -> 2
-func RemoveDuplicatesFromSortedList(head *ListNode) *ListNode {
+func RemoveDuplicatesFromSortedList(head *util.ListNode) *util.ListNode {
 		if head == nil {
 				return head
 		}

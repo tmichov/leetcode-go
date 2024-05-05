@@ -1,8 +1,17 @@
 package util
 
-import "github.com/tmichov/leetcode/easy"
+import "fmt"
 
-func PrintBinarySearchTree(head *easy.TreeNode) {
+func PrintLinkedList(root *ListNode) {
+	if root == nil {
+		return
+	}
+
+	fmt.Println(root.Val)
+	PrintLinkedList(root.Next)
+}
+
+func PrintBinarySearchTree(head *TreeNode) {
 	if head == nil {
 		return
 	}

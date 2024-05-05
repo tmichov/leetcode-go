@@ -1,12 +1,10 @@
 package easy
 
-import "fmt"
+import (
+	"fmt"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+	"github.com/tmichov/leetcode/util"
+)
 
 //       root = 1
 //      /       \
@@ -16,18 +14,18 @@ type TreeNode struct {
 //   \
 //    8
 func BinaryTreeInorderTraversal() {
-	root := &TreeNode{Val: 1}
+	root := &util.TreeNode{Val: 1}
 
-	root.Left = &TreeNode{Val: 2}
-	root.Right = &TreeNode{Val: 3}
+	root.Left = &util.TreeNode{Val: 2}
+	root.Right = &util.TreeNode{Val: 3}
 
-	root.Left.Left = &TreeNode{Val: 4}
-	root.Left.Right = &TreeNode{Val: 5}
+	root.Left.Left = &util.TreeNode{Val: 4}
+	root.Left.Right = &util.TreeNode{Val: 5}
 
-	root.Right.Left = &TreeNode{Val: 6}
-	root.Right.Right = &TreeNode{Val: 7}
+	root.Right.Left = &util.TreeNode{Val: 6}
+	root.Right.Right = &util.TreeNode{Val: 7}
 
-	root.Left.Left.Right = &TreeNode{Val: 8}
+	root.Left.Left.Right = &util.TreeNode{Val: 8}
 	
 	a := RecurringBinaryTreeInorderTraversal(root)
 //	a := IterativeBinaryTreeInorderTraversal(root)
@@ -36,7 +34,7 @@ func BinaryTreeInorderTraversal() {
 }
 
 
-func inorder(node *TreeNode, nums []int) []int {
+func inorder(node *util.TreeNode, nums []int) []int {
 	if node == nil {
 		return nums
 	}
@@ -51,16 +49,16 @@ func inorder(node *TreeNode, nums []int) []int {
 }
 
 // Solution 1 Recursive
-func RecurringBinaryTreeInorderTraversal(root *TreeNode) []int {
+func RecurringBinaryTreeInorderTraversal(root *util.TreeNode) []int {
 	a := inorder(root, []int{})
 
 	return a
 }
 
 // Solution 2 Iterative
-func IterativeBinaryTreeInorderTraversal(root *TreeNode) []int {
+func IterativeBinaryTreeInorderTraversal(root *util.TreeNode) []int {
 	nums := []int{}
-	list := []*TreeNode{}
+	list := []*util.TreeNode{}
 
 	curr := root
 

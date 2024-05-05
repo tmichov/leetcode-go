@@ -1,6 +1,10 @@
 package easy
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/tmichov/leetcode/util"
+)
 
 //       root = 1
 //      /       \
@@ -10,16 +14,16 @@ import "fmt"
 //   \
 //    8
 func SameTree() {
-	root := &TreeNode{Val: 1}
+	root := &util.TreeNode{Val: 1}
 
-	root.Left = &TreeNode{Val: 2}
-	root.Right = &TreeNode{Val: 3}
+	root.Left = &util.TreeNode{Val: 2}
+	root.Right = &util.TreeNode{Val: 3}
 
-	root1 := &TreeNode{Val: 1}
+	root1 := &util.TreeNode{Val: 1}
 
-	root1.Left = &TreeNode{Val: 2}
-	root1.Right = &TreeNode{Val: 3}
-	root1.Right = &TreeNode{Val: 3}
+	root1.Left = &util.TreeNode{Val: 2}
+	root1.Right = &util.TreeNode{Val: 3}
+	root1.Right = &util.TreeNode{Val: 3}
 	
 	// found at 96.Inorder Traversing tree
 	a := inorderCompare(root, root1)
@@ -28,7 +32,7 @@ func SameTree() {
 }
 
 
-func inorderCompare(p *TreeNode, q *TreeNode) bool {
+func inorderCompare(p *util.TreeNode, q *util.TreeNode) bool {
 	if p == nil && q == nil {
 		return true
 	}

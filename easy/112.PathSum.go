@@ -1,11 +1,13 @@
 package easy
 
-func PathSum(root *TreeNode, targetSum int) bool {
+import "github.com/tmichov/leetcode/util"
+
+func PathSum(root *util.TreeNode, targetSum int) bool {
 
 	return depthFirstSearch(root, 0, targetSum)
 }
 
-func depthFirstSearch(node *TreeNode, sum int, targetSum int) bool {
+func depthFirstSearch(node *util.TreeNode, sum int, targetSum int) bool {
 	if node == nil {
 		return false
 	}

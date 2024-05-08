@@ -40,3 +40,23 @@ func PrintBinarySearchTree(head *TreeNode) {
 	println(head.Val)
 	PrintBinarySearchTree(head.Right)
 }
+
+func GenerateBinaryTree() *TreeNode {
+	root := &TreeNode{
+		Val: 5,
+	}
+
+	root.Left = &TreeNode{Val: 4}
+	root.Right = &TreeNode{Val: 6}
+
+	root.Left.Left = &TreeNode{Val: 2}
+	root.Right.Left = &TreeNode{Val: 5}
+	root.Right.Right = &TreeNode{Val: 9}
+
+	root.Left.Left.Left = &TreeNode{Val: 1}
+	root.Left.Left.Right = &TreeNode{Val: 3}
+	root.Right.Right.Right = &TreeNode{Val: 10}
+	root.Right.Right.Left = &TreeNode{Val: 9}
+
+	return root
+}

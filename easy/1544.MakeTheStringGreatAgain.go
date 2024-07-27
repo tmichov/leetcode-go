@@ -1,16 +1,15 @@
 package easy
 
-
 func MakeGood(s string) string {
-		stack := []byte{}
+	stack := []byte{}
 
-		for i := 0; i < len(s); i++ {
-				if len(stack) > 0 && (stack[len(stack)-1] == s[i]+32 || stack[len(stack)-1] == s[i]-32) {
-						stack = stack[:len(stack)-1]
-				} else {
-						stack = append(stack, s[i])
-				}
+	for i := 0; i < len(s); i++ {
+		if len(stack) > 0 && (stack[len(stack)-1] == s[i]+32 || stack[len(stack)-1] == s[i]-32) {
+			stack = stack[:len(stack)-1]
+		} else {
+			stack = append(stack, s[i])
 		}
+	}
 
-		return string(stack)
+	return string(stack)
 }

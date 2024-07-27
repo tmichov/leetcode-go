@@ -6,7 +6,7 @@ func ConvertSorterArrayToBST(nums []int) *util.TreeNode {
 	if len(nums) == 0 {
 		return nil
 	}
-	 
+
 	if len(nums) == 1 {
 		return &util.TreeNode{
 			Val: nums[0],
@@ -14,11 +14,10 @@ func ConvertSorterArrayToBST(nums []int) *util.TreeNode {
 	}
 
 	root := &util.TreeNode{
-		Val: nums[len(nums)/2],
-		Left: ConvertSorterArrayToBST(nums[:len(nums)/2]),
+		Val:   nums[len(nums)/2],
+		Left:  ConvertSorterArrayToBST(nums[:len(nums)/2]),
 		Right: ConvertSorterArrayToBST(nums[len(nums)/2+1:]),
 	}
 
 	return root
 }
-

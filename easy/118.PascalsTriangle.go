@@ -4,7 +4,7 @@ func PascalsTriangle(numRows int) [][]int {
 	triangle := make([][]int, numRows)
 
 	for i := range triangle {
-		triangle[i] = make([]int, i+1)	
+		triangle[i] = make([]int, i+1)
 		triangle[i][0], triangle[i][i] = 1, 1
 
 		for j := 1; j < i; j++ {
@@ -14,4 +14,3 @@ func PascalsTriangle(numRows int) [][]int {
 
 	return triangle
 }
-

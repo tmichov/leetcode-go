@@ -6,16 +6,16 @@ import (
 	"github.com/tmichov/leetcode/util"
 )
 
-func SymmetricTree () {
+func SymmetricTree() {
 	root := &util.TreeNode{Val: 1}
 
 	root.Left = &util.TreeNode{Val: 4}
-	root.Left.Left= &util.TreeNode{Val: 1}
+	root.Left.Left = &util.TreeNode{Val: 1}
 	root.Left.Left.Left = &util.TreeNode{Val: 2}
 
 	root.Right = &util.TreeNode{Val: 4}
 	root.Right.Right = &util.TreeNode{Val: 1}
-	root.Right.Right.Right= &util.TreeNode{Val: 2}
+	root.Right.Right.Right = &util.TreeNode{Val: 2}
 
 	answer := inorderZeros(root.Left, root.Right)
 
@@ -24,11 +24,11 @@ func SymmetricTree () {
 
 func inorderZeros(left *util.TreeNode, right *util.TreeNode) bool {
 	if left == nil && right == nil {
-		return true;
+		return true
 	}
 
 	if left == nil || right == nil {
-		return false;
+		return false
 	}
 
 	if left.Val != right.Val {

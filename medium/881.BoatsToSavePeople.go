@@ -10,14 +10,14 @@ func BoatsToSavePeople(people []int, limit int) int {
 	numBoats := 0
 
 	start := 0
-	end := len(people)-1
+	end := len(people) - 1
 
 	for start < end {
-		if people[end] + people[start] <= limit {
+		if people[end]+people[start] <= limit {
 			start++
 		}
 
-		numBoats++	
+		numBoats++
 		end--
 
 		if start == end {
@@ -25,5 +25,5 @@ func BoatsToSavePeople(people []int, limit int) int {
 		}
 	}
 
-	return numBoats 
+	return numBoats
 }

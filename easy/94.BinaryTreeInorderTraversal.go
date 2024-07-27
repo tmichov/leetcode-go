@@ -6,13 +6,13 @@ import (
 	"github.com/tmichov/leetcode/util"
 )
 
-//       root = 1
-//      /       \
-//      2        3
-//		/   \    /    \
-//	 4     5  6      7
-//   \
-//    8
+//	      root = 1
+//	     /       \
+//	     2        3
+//			/   \    /    \
+//		 4     5  6      7
+//	  \
+//	   8
 func BinaryTreeInorderTraversal() {
 	root := &util.TreeNode{Val: 1}
 
@@ -26,13 +26,12 @@ func BinaryTreeInorderTraversal() {
 	root.Right.Right = &util.TreeNode{Val: 7}
 
 	root.Left.Left.Right = &util.TreeNode{Val: 8}
-	
+
 	a := RecurringBinaryTreeInorderTraversal(root)
-//	a := IterativeBinaryTreeInorderTraversal(root)
+	//	a := IterativeBinaryTreeInorderTraversal(root)
 
 	fmt.Println(a)
 }
-
 
 func inorder(node *util.TreeNode, nums []int) []int {
 	if node == nil {
@@ -69,7 +68,7 @@ func IterativeBinaryTreeInorderTraversal(root *util.TreeNode) []int {
 		} else {
 			curr = list[len(list)-1]
 			nums = append(nums, curr.Val)
-			list = list[:len(list)-1]	
+			list = list[:len(list)-1]
 
 			curr = curr.Right
 		}
@@ -77,4 +76,3 @@ func IterativeBinaryTreeInorderTraversal(root *util.TreeNode) []int {
 
 	return nums
 }
-

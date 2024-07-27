@@ -20,7 +20,7 @@ func RelativeRanks(score []int) []string {
 
 	var result []string
 
-	for _, s :=  range score {
+	for _, s := range score {
 		place := values[s]
 		if place == 1 {
 			result = append(result, "Gold Medal")

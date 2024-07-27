@@ -14,4 +14,3 @@ func BinaryTreePreorderTraversal(root *util.TreeNode) []int {
 
 	return list
 }
-

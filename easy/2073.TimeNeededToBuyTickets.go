@@ -1,6 +1,6 @@
 package easy
 
-func TimeNeededToBuyTickets (tickets []int, k int) int {
+func TimeNeededToBuyTickets(tickets []int, k int) int {
 	target := tickets[k]
 	seconds := 0
 

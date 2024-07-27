@@ -1,6 +1,6 @@
 package easy
 
-// 1700. Number of students unable to eat lunch, daily 
+// 1700. Number of students unable to eat lunch, daily
 func NumberOfStudentsUnableToEatLunch(students []int, sandwiches []int) int {
 	countPreferences := make(map[int]int)
 

@@ -9,7 +9,7 @@ func DeleteNodeInLinkedList(node *util.ListNode) {
 func handleNode(node *util.ListNode, prev *util.ListNode) {
 	if node.Next == nil {
 		prev.Next = nil
-		return;
+		return
 	}
 
 	node.Val = node.Next.Val

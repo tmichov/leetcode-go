@@ -2,7 +2,7 @@ package easy
 
 import "fmt"
 
-//88. Merge sorted arrays
+// 88. Merge sorted arrays
 func MergeSortedArrays(nums1 []int, m int, nums2 []int, n int) {
 	if n == 0 {
 		return
@@ -19,7 +19,7 @@ func MergeSortedArrays(nums1 []int, m int, nums2 []int, n int) {
 				if nums2[j] > c {
 					nums2 = append(nums2[1:j], append([]int{c}, nums2[j:]...)...)
 					fmt.Println(nums2)
-					break;
+					break
 				}
 
 				if j == len(nums2)-1 {

@@ -2,7 +2,7 @@ package easy
 
 import "github.com/tmichov/leetcode/util"
 
-func LinkedListCycle(head *util.ListNode) bool {	
+func LinkedListCycle(head *util.ListNode) bool {
 	if head == nil {
 		return false
 	}

@@ -41,6 +41,3 @@ func treeDepth(node *util.TreeNode) int {
 		}
 	}
 }
-
-
-

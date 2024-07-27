@@ -60,3 +60,4 @@ func GenerateBinaryTree() *TreeNode {
 
 	return root
 }
+

@@ -3,21 +3,21 @@ package easy
 import "github.com/tmichov/leetcode/util"
 
 type Res struct {
-    Res []int
+	Res []int
 }
 
 func postorderTraversal(root *util.TreeNode) []int {
-    r := Res{}
-    r.traversal(root)
+	r := Res{}
+	r.traversal(root)
 
-    return r.Res
+	return r.Res
 }
 
 func (r *Res) traversal(node *util.TreeNode) {
-    if node != nil {
-        r.traversal(node.Left)
-        r.traversal(node.Right)
+	if node != nil {
+		r.traversal(node.Left)
+		r.traversal(node.Right)
 
-        r.Res = append(r.Res, node.Val)
-    }
+		r.Res = append(r.Res, node.Val)
+	}
 }

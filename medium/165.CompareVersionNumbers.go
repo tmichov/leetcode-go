@@ -15,7 +15,7 @@ func CompareVersionNumbers(version1, version2 string) int {
 	len1 := len(ints1)
 	len2 := len(ints2)
 
-	for i:=0; i < max(len1, len2); i++ {
+	for i := 0; i < max(len1, len2); i++ {
 		v1 := 0
 		v2 := 0
 		if i < len1 {
@@ -43,11 +43,10 @@ func parseVersionNumber(version string) []int {
 	ints := []int{}
 	for _, v := range segments {
 		for v[0] == '0' && len(v) > 1 {
-			v = v[1:];
+			v = v[1:]
 		}
 
 		val, err := strconv.Atoi(v)
-
 		if err != nil {
 			ints = append(ints, 0)
 		}

@@ -7,7 +7,7 @@ import (
 func ValidPalindrome(s string) bool {
 	lcs := strings.ToLower(s)
 	start := 0
-	end := len(s)-1
+	end := len(s) - 1
 
 	for start < end {
 		if !isChar(lcs[start]) {

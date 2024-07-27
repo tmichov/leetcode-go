@@ -3,15 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/tmichov/leetcode/easy"
+	"github.com/tmichov/leetcode/medium"
 )
 
-
 func main() {
-	scores := []int{5,4,3,2,1}
+	idx := medium.SearchInRotatedArray([]int{1,3}, 3)
 
-	listed := easy.RelativeRanks(scores)
-
-	fmt.Println(listed)
+	fmt.Println(idx)
 }
-

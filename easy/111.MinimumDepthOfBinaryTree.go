@@ -10,7 +10,7 @@ func MinimumDepthOfBinaryTree(root *util.TreeNode) int {
 	leftDepth := MinimumDepthOfBinaryTree(root.Left)
 	rightDepth := MinimumDepthOfBinaryTree(root.Right)
 
-	return 1+min(leftDepth, rightDepth)
+	return 1 + min(leftDepth, rightDepth)
 }
 
 func min(leftDepth, rightDepth int) int {
@@ -28,4 +28,3 @@ func min(leftDepth, rightDepth int) int {
 
 	return rightDepth
 }
-
